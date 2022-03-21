@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/methodSelectionFragment">
+
+    <fragment
+        android:id="@+id/methodSelectionFragment"
+        android:name="com.example.smsautoverificationsample.MethodSelectionFragment"
+        android:label="fragment_method_selection"
+        tools:layout="@layout/fragment_method_selection">
+        <action
+            android:id="@+id/action_methodSelectionFragment_to_smsRetrieverFragment"
+            app:destination="@id/smsRetrieverFragment" />
+        <action
+            android:id="@+id/action_methodSelectionFragment_to_smsUserConsentFragment"
+            app:destination="@id/smsUserConsentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/smsRetrieverFragment"
+        android:name="com.example.smsautoverificationsample.usingSmsRetrieverApi.SmsRetrieverFragment"
+        android:label="fragment_sms_retriever"
+        tools:layout="@layout/fragment_sms_retriever">
+        <action
+            android:id="@+id/action_smsRetrieverFragment_to_smsVerificationResultFragment"
+            app:destination="@id/smsVerificationResultFragment"
+            app:popUpTo="@id/methodSelectionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/smsUserConsentFragment"
+        android:name="com.example.smsautoverificationsample.usingSmsUserConsentApi.SmsUserConsentFragment"
+        android:label="fragment_sms_user_consent"
+        tools:layout="@layout/fragment_sms_user_consent">
+        <action
+            android:id="@+id/action_smsUserConsentFragment_to_smsVerificationResultFragment"
+            app:destination="@id/smsVerificationResultFragment"
+            app:popUpTo="@id/methodSelectionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/smsVerificationResultFragment"
+        android:name="com.example.smsautoverificationsample.SmsVerificationResultFragment"
+        android:label="fragment_sms_verification_result"
+        tools:layout="@layout/fragment_sms_verification_result" />
+</navigation>

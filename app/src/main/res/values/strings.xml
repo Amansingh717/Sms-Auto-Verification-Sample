@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">SmsAutoVerificationSample</string>
+    <string name="text_method_selection_title">Select any one of the 2 APIs available</string>
+    <string name="text_method_selection_sms_retriever_api">Sms Retriever Api</string>
+    <string name="text_method_selection_sms_user_consent_api">Sms User Consent Api</string>
+
+    <string name="text_sms_retriever_title_phone_number">Enter your 10 digit phone number. We are using SMS Retriever API to fetch your passcode.</string>
+    <string name="text_sms_retriever_title">Enter the received One Time Passcode here. We are using SMS Retriever API to fetch your passcode.</string>
+    <string name="text_sms_user_consent_title_phone_number">Enter your 10 digit phone number. We are using SMS user consent API to fetch your passcode.</string>
+    <string name="text_sms_user_consent_title">Enter the received One Time Passcode here. We are using SMS user consent API to fetch your passcode.</string>
+    <string name="hint_text_sms_retriever">XXXXXX</string>
+    <string name="hint_text_sms_retriever_phone_number">XXXXXXXXX</string>
+    <string name="hint_text_sms_user_consent">XXXXXX</string>
+    <string name="hint_text_sms_user_consent_phone_number">XXXXXXXXXX</string>
+    <string name="text_proceed">Proceed</string>
+</resources>
